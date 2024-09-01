@@ -1,0 +1,98 @@
+Excel Project Data Analysis
+
+Task 1: Data Cleaning
+
+1. Worksheet Setup:
+   - Created three dedicated worksheets:
+     - Working Sheet
+     - Pivot Table
+     - Dashboard
+
+2. Data Transfer:
+   - Transferred the entire dataset from the "bike_buyer" worksheet to the "Working Sheet".
+
+3. Column Filters:
+   - Applied filters to all columns in the "Working Sheet" to facilitate data exploration.
+
+4. Duplicate Removal:
+   - Identified and removed 26 duplicate records using the "Remove Duplicates" feature.
+
+5. Data Standardization:
+   - Updated the "Marital Status" column, replacing "M" with "Married" and "S" with "Single".
+   - Standardized the "Gender" column by replacing "M" and "F" with "Male" and "Female" respectively. These changes were executed using the Find & Replace tool.
+
+6. Currency Formatting:
+   - Converted the "Income" column to display values in US Dollars ($) for consistency.
+
+7. Data Validation:
+   - Thoroughly reviewed each row and column to ensure accuracy and eliminate errors.
+
+8. Age Brackets:
+   - Inserted a new column titled "Age Brackets" adjacent to the "Age" column.
+   - Categorized age groups using the following formula with IF and Nested IF conditions:
+     =IF(L2:L1001>54,"Old",IF(L2:L1001>=31,"Middle Age",IF(L2:L1001<31,"Adolescent","Invalid")))
+
+
+Task 2: Pivot Table and Chart Creation
+
+2.1 Pivot Table
+
+1. Pivot Table Creation:
+   - Generated a pivot table in the "Pivot Table" worksheet using data from the "Working Sheet".
+   - Selected the entire dataset with Ctrl + A and used the PivotTable option from the Insert tab.
+
+2. Income Analysis:
+   - Added the "Income" column to the "Values" area to calculate the sum.
+   - Added the "Gender" column to the "Rows" area.
+   - Modified the "Values" settings to display the average income instead of the sum.
+
+2.2 Pivot Chart
+
+1. Bar Chart for Average Income:
+   - Inserted a bar chart based on the pivot table to visualize the average income per purchase.
+   - Renamed the chart title to "Avg Income per Purchase".
+   - Updated the axes title to "Gender".
+   - Adjusted the chart to display decimal values for precision.
+
+2.3 Commute Distance Analysis
+
+1. Pivot Table Setup:
+   - Added "Commute Distance" to the "Rows" area and the "Purchase of Bike" to the "Values" area (count).
+   - Placed "Purchased Bike" in the "Columns" area.
+
+2.4 Commute Distance Chart
+
+1. Line Chart Creation:
+   - Created a line chart to display data related to commute distance.
+   - Addressed data inconsistencies by updating "10+ miles" to "More than 10 miles" in the "Commute Distance" column on the "Working Sheet".
+   - Renamed the axes title to "Commute Distance" and the chart title to "Customer Commute".
+
+2.5 Age Brackets Analysis
+
+1. Pivot Table Setup:
+   - Added "Age Brackets" to the "Rows" area and the "Purchase of Bike" to the "Values" area (count).
+   - Placed "Purchased Bike" in the "Columns" area.
+
+2.6 Age Brackets Chart
+
+1. Line Chart for Age Brackets:
+   - Created a line chart to represent customer age brackets.
+   - Enabled gridlines for better data visibility.
+   - Updated the axes title to "Age Brackets" and the chart title to "Customer Age Brackets".
+
+
+Task 3: Dashboard Creation
+
+1. Chart Integration:
+   - Copied the following charts to the "Dashboard" sheet:
+     - Bar Chart (Avg Income per Purchase)
+     - Line Chart (Customer Commute)
+     - Line Chart (Customer Age Brackets)
+
+2. Formatting:
+   - Removed Excel gridlines by deselecting them in the View tab.
+   - Merged and centered columns A to O, rows 1 to 6, adjusted the size, and formatted the text to be bold and centered.
+
+3. Interactive Slicers:
+   - Added slicers for "Marital Status", "Region", and "Education" to the dashboard for interactive data filtering.
+   - Linked slicers to all charts using the Report Connections option, enabling dynamic filtering.
